@@ -1,0 +1,25 @@
+{
+  "name": "lab-01",
+  "version": "1.0.0",
+  "description": "## Project Name",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint **/*.js",
+    "test": "jest --verbose --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claytonjones-401n16/lab-01.git"
+  },
+  "keywords": [],
+  "author": "Clayton Jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/claytonjones-401n16/lab-01/issues"
+  },
+  "homepage": "https://github.com/claytonjones-401n16/lab-01#readme",
+  "dependencies": {
+    "minimist": "^1.2.5"
+  }
+}
