@@ -1,10 +1,12 @@
 'use strict';
 
-// require lib/input.js
-// require lib/notes.js
+const input = require ('./lib/input.js');
+const notes = require('./lib/notes.js');
 
-let input = require('minimist')(process.argv.slice(2));
 
-if (input.a || input.add) console.log('Good');
-else console.log('Error!')
+// make function to check for right flag
 
+// console.log('index.js input:', input);
+if (input.validatedInput.payload) {
+  console.log('Good!');
+}
