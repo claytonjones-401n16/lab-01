@@ -1,29 +1,100 @@
 'use strict';
 
-const input = require('../lib/input.js');
+jest.mock('minimist');
 
-// describe('Testing input', () => {
-//   it('Should return error if flag is not valid', () => {
-//     expect(input.validate({ _: [], b: 'beep' })).toBe('Error!');
-//   });
+const minimist = require('minimist');
 
-//   it('Should return obj with something in payload is flag is valid', () => {
-//     expect(input.validate({ _: [], a: 'beep' }).payload).toBeTruthy();
-//   });
+const Input = require('../lib/input.js');
 
-//   it('Should return error if no data is given', () => {
-//     expect(input.validate({ _: [], a: true })).toBe('Error!');
-//   });
 
-// })
 
-function trueAsF() {
-  return true;
-}
+describe('Testing input module', () => {
 
-describe('Fake suite', () => {
-  it('TrueAsF', () => {
-    expect(trueAsF()).toBeTruthy();
+  it('Testing validate(): Should return false if flag is not valid', () => {
+    minimist.mockImplementation(() => {
+      return {
+        _: [],
+        b: 'text'
+      }
+    })
+    const input = new Input();
+    expect(input.validate()).toBeFalsy();
+  });
+
+  it('Testing validate(): Should return false if flag contains no data', () => {
+    minimist.mockImplementation(() => {
+      return {
+        _: [],
+        a: true
+      }
+    })
+    const input = new Input();
+    expect(input.validate()).toBeFalsy();
+  });
+
+  it('Testing validate(): Should return true if flag is -a', () => {
+    minimist.mockImplementation(() => {
+      return {
+        _: [],
+        a: 'text'
+      }
+    })
+    const input = new Input();
+    expect(input.validate()).toBeTruthy();
+  });
+
+  it('Testing validate(): Should return true if flag is -a', () => {
+    minimist.mockImplementation(() => {
+      return {
+        _: [],
+        add: 'text'
+      }
+    })
+    const input = new Input();
+    expect(input.validate()).toBeTruthy();
+  });
+
+  it('Testing action(): Should return object with action and payload if flags are valid', () => {
+    minimist.mockImplementation(() => {
+      return {
+        _: [],
+        add: 'text'
+      }
+    })
+    const input = new Input();
+    expect(input.action()).toMatchObject({action: 'add', payload: 'text'});
+  });
+
+  it('Testing action(): Should not return anything if flags are invalid', () => {
+    minimist.mockImplementation(() => {
+      return {
+        _: [],
+        b: 'text'
+      }
+    })
+    const input = new Input();
+    expect(input.action()).toBeFalsy();
+  });
+
+  it('Testing action(): Should not return anything if flags are empty', () => {
+    minimist.mockImplementation(() => {
+      return {
+        _: [],
+        a: true
+      }
+    })
+    const input = new Input();
+    expect(input.action()).toBeFalsy();
   });
 
 })
+
+// function trueAsF() {
+//   return true;
+// }
+
+// describe('Fake suite', () => {
+//   it('TrueAsF', () => {
+//     expect(trueAsF()).toBeTruthy();
+//   });
+// })
