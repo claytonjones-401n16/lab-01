@@ -9,7 +9,4 @@ describe('Fake suite', () => {
     expect(trueAsF()).toBeTruthy();
   });
 
-  
-
-  // test for if a: 'true' as edge case
 })
