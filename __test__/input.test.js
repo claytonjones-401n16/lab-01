@@ -14,9 +14,9 @@ describe('Testing input module', () => {
     minimist.mockImplementation(() => {
       return {
         _: [],
-        b: 'text'
-      }
-    })
+        b: 'text',
+      };
+    });
     const input = new Input();
     expect(input.validate()).toBeFalsy();
   });
@@ -25,9 +25,9 @@ describe('Testing input module', () => {
     minimist.mockImplementation(() => {
       return {
         _: [],
-        a: true
-      }
-    })
+        a: true,
+      };
+    });
     const input = new Input();
     expect(input.validate()).toBeFalsy();
   });
@@ -36,9 +36,9 @@ describe('Testing input module', () => {
     minimist.mockImplementation(() => {
       return {
         _: [],
-        a: 'text'
-      }
-    })
+        a: 'text',
+      };
+    });
     const input = new Input();
     expect(input.validate()).toBeTruthy();
   });
@@ -47,9 +47,9 @@ describe('Testing input module', () => {
     minimist.mockImplementation(() => {
       return {
         _: [],
-        add: 'text'
-      }
-    })
+        add: 'text',
+      };
+    });
     const input = new Input();
     expect(input.validate()).toBeTruthy();
   });
@@ -58,9 +58,9 @@ describe('Testing input module', () => {
     minimist.mockImplementation(() => {
       return {
         _: [],
-        add: 'text'
-      }
-    })
+        add: 'text',
+      };
+    });
     const input = new Input();
     expect(input.action()).toMatchObject({action: 'add', payload: 'text'});
   });
@@ -69,9 +69,9 @@ describe('Testing input module', () => {
     minimist.mockImplementation(() => {
       return {
         _: [],
-        b: 'text'
-      }
-    })
+        b: 'text',
+      };
+    });
     const input = new Input();
     expect(input.action()).toBeFalsy();
   });
@@ -80,14 +80,14 @@ describe('Testing input module', () => {
     minimist.mockImplementation(() => {
       return {
         _: [],
-        a: true
-      }
-    })
+        a: true,
+      };
+    });
     const input = new Input();
     expect(input.action()).toBeFalsy();
   });
 
-})
+});
 
 // function trueAsF() {
 //   return true;
