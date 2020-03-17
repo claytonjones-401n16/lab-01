@@ -1,6 +1,6 @@
 {
-  "name": "lab-01",
-  "version": "1.0.0",
+  "name": "@claytonjones7/notes",
+  "version": "1.0.1",
   "description": "## Project Name",
   "main": "index.js",
   "scripts": {

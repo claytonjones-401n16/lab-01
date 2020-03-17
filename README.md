@@ -1,13 +1,14 @@
-# LAB - Class xx
+# LAB - Class 01
 
-## Project Name
+## Lab-01
 
-### Author: Student/Group Name
+### Author: Clayton Jones
 
 ### Links and Resources
 
 - [submission PR](https://github.com/claytonjones-401n16/lab-01/pull/2)
-- [ci/cd](https://github.com/claytonjones-401n16/lab-01/actions) (GitHub Actions)
+- [ci/cd: GitHub Actions](https://github.com/claytonjones-401n16/lab-01/actions)
+- [NPM Package](https://www.npmjs.com/package/@claytonjones7/notes)
 
 ### Setup
 
@@ -18,7 +19,7 @@ N/A
 #### How to initialize/run your application (where applicable)
 
 - If cloned repo: `npm i` then `node index.js -a "NOTE_TO_ADD"`
-- For npm package: `npm i NPM_PACKAGE_NAME`
+- npm package: `npm i @claytonjones7/notes`
 
 #### How to use your library (where applicable)
 - `notes -a (or --add) "NOTE_TO_ADD"`
