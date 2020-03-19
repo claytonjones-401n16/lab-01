@@ -73,7 +73,7 @@ describe('Testing input module', () => {
       };
     });
     const input = new Input();
-    expect(input.action()).toBeFalsy();
+    expect(input.validate()).toBeFalsy();
   });
 
   it('Testing action(): Should not return anything if flags are empty', () => {
@@ -84,7 +84,7 @@ describe('Testing input module', () => {
       };
     });
     const input = new Input();
-    expect(input.action()).toBeFalsy();
+    expect(input.validate()).toBeFalsy();
   });
 
 });
