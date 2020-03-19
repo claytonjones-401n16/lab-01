@@ -1,12 +1,16 @@
 {
-  "name": "lab-01",
-  "version": "1.0.0",
-  "description": "## Project Name",
+  "name": "@claytonjones7/notes",
+  "version": "1.0.2",
+  "description": "Notes Application",
   "main": "index.js",
+  "bin": {
+    "notes": "./index.js"
+  },
   "scripts": {
     "start": "node index.js",
     "lint": "eslint **/*.js",
-    "test": "jest --verbose --coverage"
+    "test": "jest --verbose --coverage",
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
   },
   "repository": {
     "type": "git",
@@ -20,6 +24,7 @@
   },
   "homepage": "https://github.com/claytonjones-401n16/lab-01#readme",
   "dependencies": {
+    "jest": "^25.1.0",
     "minimist": "^1.2.5"
   }
 }

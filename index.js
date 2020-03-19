@@ -1,10 +1,9 @@
+#!/usr/bin/env node
 'use strict';
 
-// require lib/input.js
-// require lib/notes.js
+const Input = require('./lib/input.js');
+const Notes = require('./lib/notes.js');
 
-let input = require('minimist')(process.argv.slice(2));
+const input = new Input();
 
-if (input.a || input.add) console.log('Good');
-else console.log('Error!')
-
+const note = new Notes(input);
