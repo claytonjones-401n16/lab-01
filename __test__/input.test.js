@@ -7,7 +7,6 @@ const minimist = require('minimist');
 const Input = require('../lib/input.js');
 
 
-
 describe('Testing input module', () => {
 
   it('Testing validate(): Should return false if flag is not valid', () => {
@@ -88,13 +87,3 @@ describe('Testing input module', () => {
   });
 
 });
-
-// function trueAsF() {
-//   return true;
-// }
-
-// describe('Fake suite', () => {
-//   it('TrueAsF', () => {
-//     expect(trueAsF()).toBeTruthy();
-//   });
-// })

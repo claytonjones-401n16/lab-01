@@ -16,7 +16,7 @@ describe('Notes Module', () => {
     let input = new Input();
     let note = new Notes(input);
     const spy = jest.spyOn(console, 'log');
-    const operation = jest.fn(note.operation(input));
+    const operation = jest.fn(note.operation(input.command));
     operation();
 
     expect(spy).toHaveBeenCalled();
@@ -38,16 +38,3 @@ describe('Notes Module', () => {
     expect(spy).toHaveBeenCalled();
   });
 });
-
-
-
-// function trueAsF() {
-//   return true;
-// }
-
-// describe('Fake suite', () => {
-//   it('TrueAsF', () => {
-//     expect(trueAsF()).toBeTruthy();
-//   });
-
-// })

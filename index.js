@@ -6,10 +6,4 @@ const Notes = require('./lib/notes.js');
 
 const input = new Input();
 
-// validated input from input file
-// if (input.validate()) {
-  const note = new Notes(input);
-  // note.operation();
-// }
-// else console.log('Error!');
-
+const note = new Notes(input);
