@@ -1,8 +1,11 @@
 {
   "name": "@claytonjones7/notes",
-  "version": "1.0.1",
-  "description": "## Project Name",
+  "version": "1.0.2",
+  "description": "Notes Application",
   "main": "index.js",
+  "bin": {
+    "notes": "./index.js"
+  },
   "scripts": {
     "start": "node index.js",
     "lint": "eslint **/*.js",
