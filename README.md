@@ -1,12 +1,12 @@
-# LAB - Class 01
+# NOTES APPLICATION
 
-## Lab-01
+## Classes - lab02
 
 ### Author: Clayton Jones
 
 ### Links and Resources
 
-- [submission PR](https://github.com/claytonjones-401n16/lab-01/pull/2)
+- [submission PR](https://github.com/claytonjones-401n16/lab-01/pull/3)
 - [ci/cd: GitHub Actions](https://github.com/claytonjones-401n16/lab-01/actions)
 - [NPM Package](https://www.npmjs.com/package/@claytonjones7/notes)
 
