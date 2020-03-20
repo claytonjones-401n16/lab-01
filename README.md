@@ -33,12 +33,11 @@ N/A
     - testing various flags and making data is within those flags
   - 2 tests of notes module
     - testing that the prototype functions call and produce as expected
-  - 4 tests of validator module
-    - testing validity of inputs
+  - 12 tests of validator module
+    - testing all validator methods with good/bad input
 - Describe any tests that you did not complete, skipped, etc
   - all tests complete, 94% line coverage
 
 #### UML
-
 
 ![lab-01](./assets/lab-01-UML.jpg)
