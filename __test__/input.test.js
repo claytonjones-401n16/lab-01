@@ -53,37 +53,37 @@ describe('Testing input module', () => {
     expect(input.validate()).toBeTruthy();
   });
 
-  it('Testing action(): Should return object with action and payload if flags are valid', () => {
-    minimist.mockImplementation(() => {
-      return {
-        _: [],
-        add: 'text',
-      };
-    });
-    const input = new Input();
-    expect(input.action()).toMatchObject({action: 'add', payload: 'text'});
-  });
+  // it('Testing action(): Should return object with action and payload if flags are valid', () => {
+  //   minimist.mockImplementation(() => {
+  //     return {
+  //       _: [],
+  //       add: 'text',
+  //     };
+  //   });
+  //   const input = new Input();
+  //   expect(input.action()).toMatchObject({action: 'add', payload: 'text'});
+  // });
 
-  it('Testing action(): Should not return anything if flags are invalid', () => {
-    minimist.mockImplementation(() => {
-      return {
-        _: [],
-        b: 'text',
-      };
-    });
-    const input = new Input();
-    expect(input.validate()).toBeFalsy();
-  });
+  // it('Testing action(): Should not return anything if flags are invalid', () => {
+  //   minimist.mockImplementation(() => {
+  //     return {
+  //       _: [],
+  //       b: 'text',
+  //     };
+  //   });
+  //   const input = new Input();
+  //   expect(input.validate()).toBeFalsy();
+  // });
 
-  it('Testing action(): Should not return anything if flags are empty', () => {
-    minimist.mockImplementation(() => {
-      return {
-        _: [],
-        a: true,
-      };
-    });
-    const input = new Input();
-    expect(input.validate()).toBeFalsy();
-  });
+  // it('Testing action(): Should not return anything if flags are empty', () => {
+  //   minimist.mockImplementation(() => {
+  //     return {
+  //       _: [],
+  //       a: true,
+  //     };
+  //   });
+  //   const input = new Input();
+  //   expect(input.validate()).toBeFalsy();
+  // });
 
 });

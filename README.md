@@ -1,12 +1,12 @@
-# LAB - Class 01
+# NOTES APPLICATION
 
-## Lab-01
+## Classes - lab02
 
 ### Author: Clayton Jones
 
 ### Links and Resources
 
-- [submission PR](https://github.com/claytonjones-401n16/lab-01/pull/2)
+- [submission PR](https://github.com/claytonjones-401n16/lab-01/pull/3)
 - [ci/cd: GitHub Actions](https://github.com/claytonjones-401n16/lab-01/actions)
 - [NPM Package](https://www.npmjs.com/package/@claytonjones7/notes)
 
@@ -33,10 +33,11 @@ N/A
     - testing various flags and making data is within those flags
   - 2 tests of notes module
     - testing that the prototype functions call and produce as expected
+  - 12 tests of validator module
+    - testing all validator methods with good/bad input
 - Describe any tests that you did not complete, skipped, etc
-  - all tests complete, 100% line coverage
+  - all tests complete, 94% line coverage
 
 #### UML
 
-
-![lab=01](./assets/lab-01-UML.jpg)
+![lab-01](./assets/lab-01-UML.jpg)
