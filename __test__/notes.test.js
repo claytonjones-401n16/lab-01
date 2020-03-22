@@ -4,6 +4,7 @@ jest.mock('minimist');
 const Input = require('../lib/input.js');
 const Notes = require('../lib/notes.js');
 const minimist = require('minimist');
+const mongoose = require('mongoose');
 
 describe('Notes Module', () => {
   it('Testing operation(): should call add() and output console log', () => {
