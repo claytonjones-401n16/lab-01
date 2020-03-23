@@ -3,10 +3,10 @@
 const mongoose = require('mongoose');
 
 const notesSchema = mongoose.Schema({
-  id: { type: 'number', required: true },
-  text: { type: 'string', required: true }
+  note: { type: String, required: true },
+  category: { type: Array }
 });
 
 const notesModel = mongoose.model('notes', notesSchema);
 
-modeul.exports = notesModel;
+module.exports = notesModel;
