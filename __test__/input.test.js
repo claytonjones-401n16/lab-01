@@ -53,6 +53,18 @@ describe('Testing input module', () => {
     expect(input.command.action).toStrictEqual('add');
   });
 
+  it('Testing --add flag with data and category, command should have category', () => {
+    minimist.mockImplementation(() => {
+      return {
+        _: [],
+        add: 'text',
+        category: 'testing'
+      };
+    });
+    const input = new Input();
+    expect(input.command.category).toStrictEqual('testing');
+  });
+
   it('Testing -l flag, command should have action list', () => {
     minimist.mockImplementation(() => {
       return {
