@@ -1,12 +1,12 @@
 # NOTES APPLICATION
 
-## Classes - lab02
+## MongoDB - lab03
 
 ### Author: Clayton Jones
 
 ### Links and Resources
 
-- [submission PR](https://github.com/claytonjones-401n16/lab-01/pull/3)
+- [submission PR](https://github.com/claytonjones-401n16/lab-01/pull/4)
 - [ci/cd: GitHub Actions](https://github.com/claytonjones-401n16/lab-01/actions)
 - [NPM Package](https://www.npmjs.com/package/@claytonjones7/notes)
 
@@ -18,25 +18,29 @@ N/A
 
 #### How to initialize/run your application (where applicable)
 
-- If cloned repo: `npm i` then `node index.js -a "NOTE_TO_ADD"`
+- If cloned repo: `npm i`
 - npm package: `npm i @claytonjones7/notes`
+- connect to local mongoDB `mongod --dbpath=PATH_TO_DB`
 
 #### How to use your library (where applicable)
-- `notes -a (or --add) "NOTE_TO_ADD"`
+- add a note: `notes -a (or --add) "NOTE_TO_ADD" (optional: --category "CATEGORY_FOR_NOTE")`
+- list notes: `notes -l (or --list) (optional: "CATEGORY")`
+- delete a note: `notes -d UNIQUE_NOTE_ID`
 
 #### Tests
 
 - How do you run tests?
   - `npm test`
 - Any tests of note?
-  - 7 tests of input module
-    - testing various flags and making data is within those flags
-  - 2 tests of notes module
-    - testing that the prototype functions call and produce as expected
-  - 12 tests of validator module
+  - input module
+    - testing various flags and user input combinations
+  - notes module
+    - no tests as of now
+  - validator module
     - testing all validator methods with good/bad input
+    - not necessary now, will end up deleting
 - Describe any tests that you did not complete, skipped, etc
-  - all tests complete, 94% line coverage
+  - notes.test.js contains fake true is truthy test. not testing mongoDB functions at the moment
 
 #### UML
 
